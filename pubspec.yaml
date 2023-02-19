@@ -89,6 +89,10 @@ flutter:
       fonts:
         - asset: assets/fonts/Janna LT Bold.ttf
 
+    - family: FontAwesome
+      fonts:
+        - asset: assets/fonts/icons.ttf
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -141,8 +141,7 @@ Widget categoriesItem(CategoriesData categoriesData) => Stack(
     ),
   ],
 );
-Widget productList( ProductModel model, context) =>
-    Container(
+Widget productList( ProductModel model, context) => Container(
       color: Colors.white,
       child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,

@@ -1,4 +1,6 @@
 
+import 'package:shopapp/Layout/social_app/cubit/states.dart';
+
 abstract class SocialStates{}
 
 class SocialInitialState extends SocialStates{}
@@ -14,3 +16,6 @@ class SocialGetUserErrorState extends SocialStates
   SocialGetUserErrorState(this.error);
 
 }
+
+
+class ChangeNavigationBarState extends SocialStates{}

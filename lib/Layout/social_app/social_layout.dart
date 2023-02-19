@@ -14,20 +14,35 @@ class SocialLayout extends StatelessWidget {
       listener: (context,state) {},
         builder: (context, state)
         {
+          var cubit = SocialCubit.get(context);
           return Scaffold(
             appBar: AppBar(
-              title: Text('News Feed',),
+              title: Text('${SocialCubit.get(context).titles[SocialCubit.get(context).currentIndex]}'),
             ),
-            body: ConditionalBuilder(
-                condition: SocialCubit.get(context).model != null,
-                builder: (context){
-                  var model = SocialCubit.get(context).model;
-                  return Column(
-                    children: [
-                    ],
-                  );
-                },
-                fallback: (context) => Center(child: CircularProgressIndicator())),
+            body: cubit.screens[cubit.currentIndex],
+            bottomNavigationBar: BottomNavigationBar(
+              currentIndex: cubit.currentIndex,
+              onTap: (index)
+              {
+                cubit.changeBottomNav(index);
+              },
+              items: [
+                BottomNavigationBarItem(
+                    icon: Icon(Icons.feed),
+                label: 'Feed'),
+                BottomNavigationBarItem(
+                    icon: Icon(Icons.chat),
+                    label: 'Chat'),
+                BottomNavigationBarItem(
+                    icon: Icon(Icons.notifications),
+                    label: 'Notifications'),
+                BottomNavigationBarItem(
+                    icon: Icon(Icons.settings),
+                    label: 'Settings'),
+              ],
+
+            ),
+
 
 
 

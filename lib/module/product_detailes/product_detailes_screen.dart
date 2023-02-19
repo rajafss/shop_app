@@ -17,13 +17,13 @@ class ProductDetaileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-void getImages()
-{
-  for(int i = 0; i< product.images.length; i++)
-  {
-    print(product.images[i]);
-  }
-}
+// void getImages()
+// {
+//   for(int i = 0; i< product.images.length; i++)
+//   {
+//     print(product.images[i]);
+//   }
+// }
 
     return  Scaffold(
           appBar: AppBar(

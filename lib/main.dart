@@ -75,7 +75,7 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             theme: lightTheme,
             darkTheme: darkTheme,
-            home: OnBoardingScreen(),
+            home: token != null ? HomeLayoutScreen() : OnBoardingScreen(),
           );
         }
           // token != null ? HomeLayoutScreen() : OnBoardingScreen(),
